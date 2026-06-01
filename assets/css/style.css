@@ -1,0 +1,332 @@
+:root{
+  --bg:#120826;
+  --bg-2:#1b1035;
+  --card:#221240;
+  --purple:#7c3aed;
+  --purple-light:#a855f7;
+  --gold:#f59e0b;
+  --white:#ffffff;
+  --gray:#c9c9d4;
+  --border:rgba(255,255,255,.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+  background:rgba(18,8,38,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+
+.logo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2rem;
+  letter-spacing:2px;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+}
+
+.nav-links a{
+  color:var(--white);
+  text-decoration:none;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:var(--purple-light);
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+#currency-selector{
+  background:var(--bg-2);
+  color:var(--white);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:8px 10px;
+}
+
+#menu-btn{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:1.4rem;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:80px 24px;
+  background:
+  radial-gradient(circle at top right,
+  rgba(124,58,237,.25),
+  transparent 35%);
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:999px;
+  background:rgba(124,58,237,.15);
+  border:1px solid rgba(168,85,247,.3);
+  color:var(--purple-light);
+  font-size:.8rem;
+  font-weight:600;
+}
+
+.hero h1{
+  font-size:5rem;
+  line-height:1;
+  margin-top:25px;
+  margin-bottom:25px;
+  font-family:'Bebas Neue',sans-serif;
+}
+
+.hero h1 span{
+  color:var(--purple-light);
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:var(--gray);
+  line-height:1.8;
+  font-size:1.1rem;
+}
+
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+.btn-primary,
+.btn-secondary{
+  padding:14px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.btn-primary{
+  background:var(--purple);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--purple-light);
+}
+
+.btn-secondary{
+  border:1px solid var(--border);
+  color:white;
+}
+
+/* SECTIONS */
+
+.featured-section,
+.destinations,
+.trust-section{
+  padding:90px 40px;
+}
+
+.section-label{
+  color:var(--purple-light);
+  font-size:.8rem;
+  letter-spacing:2px;
+  display:block;
+  margin-bottom:10px;
+}
+
+.section-header h2{
+  font-size:3rem;
+  font-family:'Bebas Neue',sans-serif;
+}
+
+/* EVENTS */
+
+.events-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+}
+
+.event-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.event-card:hover{
+  transform:translateY(-6px);
+}
+
+.event-image{
+  height:220px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:3rem;
+  font-family:'Bebas Neue',sans-serif;
+}
+
+.purple-bg{
+  background:linear-gradient(135deg,#38146d,#7c3aed);
+}
+
+.pink-bg{
+  background:linear-gradient(135deg,#7e1144,#ec4899);
+}
+
+.blue-bg{
+  background:linear-gradient(135deg,#17367d,#3b82f6);
+}
+
+.event-info{
+  padding:20px;
+}
+
+.event-info p{
+  color:var(--gray);
+  margin:10px 0;
+}
+
+.price{
+  color:var(--gold);
+  font-weight:700;
+}
+
+/* DESTINATIONS */
+
+.city-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+}
+
+.city-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:30px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:600;
+}
+
+/* TRUST */
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.trust-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:24px;
+}
+
+.trust-card p{
+  margin-top:12px;
+  color:var(--gray);
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--border);
+  padding:60px 30px;
+  text-align:center;
+}
+
+.footer-links{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.footer-links a{
+  color:var(--gray);
+  text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:18px 20px;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  #menu-btn{
+    display:block;
+  }
+
+  .hero h1{
+    font-size:3.5rem;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .featured-section,
+  .destinations,
+  .trust-section{
+    padding:70px 20px;
+  }
+}
